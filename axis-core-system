@@ -1,0 +1,84 @@
+ESTRUTURA OFICIAL — GITHUB AXIS CORE™
+
+AXIS-CORE/
+│
+├── README.md
+├── LICENSE
+├── .gitignore
+├── package.json
+├── next.config.js
+├── tailwind.config.ts
+├── tsconfig.json
+│
+├── public/
+│   ├── logos/
+│   ├── icons/
+│   ├── backgrounds/
+│   ├── holographic/
+│   └── images/
+│
+├── docs/
+│   ├── architecture/
+│   ├── protocols/
+│   ├── manuals/
+│   ├── branding/
+│   └── apostilas/
+│
+├── prompts/
+│   ├── axis-core/
+│   ├── modules/
+│   ├── automation/
+│   └── ai/
+│
+├── frontend/
+│   ├── app/
+│   ├── components/
+│   ├── layouts/
+│   ├── dashboard/
+│   ├── therapist/
+│   ├── client/
+│   ├── reports/
+│   ├── protocols/
+│   ├── auth/
+│   └── settings/
+│
+├── backend/
+│   ├── api/
+│   ├── services/
+│   ├── auth/
+│   ├── protocols/
+│   ├── frequencies/
+│   └── reports/
+│
+├── database/
+│   ├── schema/
+│   ├── migrations/
+│   ├── seeds/
+│   └── supabase/
+│
+├── modules/
+│   ├── quantum-box/
+│   ├── hado-quantum/
+│   ├── potentizer/
+│   ├── resonance/
+│   ├── biofield/
+│   ├── remote/
+│   └── infinity/
+│
+├── reports/
+│   ├── templates/
+│   ├── pdf/
+│   └── analytics/
+│
+├── assets/
+│   ├── ui/
+│   ├── diagrams/
+│   ├── sacred-geometry/
+│   ├── visual-system/
+│   └── branding/
+│
+└── integrations/
+├── openai/
+├── supabase/
+├── vercel/
+└── automation/
