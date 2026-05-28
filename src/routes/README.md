@@ -1,3 +1,40 @@
+
+# AXIS™ CORE
+
+Sistema Operacional Modular de Inteligência Vibracional Integrada.
+
+## Tecnologias
+- React
+- TypeScript
+- Vite
+- Tailwind
+- Supabase
+- Vercel
+
+## Módulos
+- Quantum Box
+- Mesa Hado Quantum
+- Potentizer
+- Resonance
+- BioField
+
+## Funcionalidades
+- Painel do terapeuta
+- Painel do cliente
+- Relatórios PDF
+- Protocolos vibracionais
+- Sessões remotas
+- Biblioteca AXIS™
+
+## Estrutura
+- Dashboard modular
+- Sistema escalável
+- Arquitetura premium
+
+## Deploy
+- GitHub
+- Supabase
+- Vercel
 # Routes
 
 TanStack Start uses **file-based routing**. Every `.tsx` file in this directory
