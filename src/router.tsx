@@ -1,3 +1,10 @@
+
+Sidebar
+Topbar
+Main Layout
+Theme Provider
+Navigation
+Dashboard Container
 import { QueryClient } from "@tanstack/react-query";
 import { createRouter } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
