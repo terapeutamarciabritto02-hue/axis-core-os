@@ -5,7 +5,6 @@ client/
 ├── evolution.tsx
 ├── reports.tsx
 └── frequencies.tsx
-
 import { createFileRoute } from "@tanstack/react-router";
 import { PanelShell, Panel } from "@/components/axis/PanelShell";
 
