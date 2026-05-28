@@ -1,3 +1,9 @@
+reports/
+│
+├── index.tsx
+├── pdf.tsx
+├── analytics.tsx
+└── exports.tsx
 import { createFileRoute } from "@tanstack/react-router";
 import { PanelShell, Panel } from "@/components/axis/PanelShell";
 
