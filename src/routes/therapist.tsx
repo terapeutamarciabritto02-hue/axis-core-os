@@ -1,3 +1,12 @@
+therapist/
+│
+├── index.tsx
+├── clients.tsx
+├── sessions.tsx
+├── protocols.tsx
+├── remote.tsx
+└── reports.tsx
+
 import { createFileRoute } from "@tanstack/react-router";
 import { PanelShell, Panel } from "@/components/axis/PanelShell";
 
