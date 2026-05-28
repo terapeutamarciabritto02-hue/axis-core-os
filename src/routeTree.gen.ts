@@ -9,8 +9,38 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TherapistRouteImport } from './routes/therapist'
+import { Route as ReportsRouteImport } from './routes/reports'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as LibraryRouteImport } from './routes/library'
+import { Route as ClientRouteImport } from './routes/client'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TherapistRoute = TherapistRouteImport.update({
+  id: '/therapist',
+  path: '/therapist',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReportsRoute = ReportsRouteImport.update({
+  id: '/reports',
+  path: '/reports',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LibraryRoute = LibraryRouteImport.update({
+  id: '/library',
+  path: '/library',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ClientRoute = ClientRouteImport.update({
+  id: '/client',
+  path: '/client',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +49,90 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/client': typeof ClientRoute
+  '/library': typeof LibraryRoute
+  '/login': typeof LoginRoute
+  '/reports': typeof ReportsRoute
+  '/therapist': typeof TherapistRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/client': typeof ClientRoute
+  '/library': typeof LibraryRoute
+  '/login': typeof LoginRoute
+  '/reports': typeof ReportsRoute
+  '/therapist': typeof TherapistRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/client': typeof ClientRoute
+  '/library': typeof LibraryRoute
+  '/login': typeof LoginRoute
+  '/reports': typeof ReportsRoute
+  '/therapist': typeof TherapistRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/client' | '/library' | '/login' | '/reports' | '/therapist'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/client' | '/library' | '/login' | '/reports' | '/therapist'
+  id:
+    | '__root__'
+    | '/'
+    | '/client'
+    | '/library'
+    | '/login'
+    | '/reports'
+    | '/therapist'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ClientRoute: typeof ClientRoute
+  LibraryRoute: typeof LibraryRoute
+  LoginRoute: typeof LoginRoute
+  ReportsRoute: typeof ReportsRoute
+  TherapistRoute: typeof TherapistRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/therapist': {
+      id: '/therapist'
+      path: '/therapist'
+      fullPath: '/therapist'
+      preLoaderRoute: typeof TherapistRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reports': {
+      id: '/reports'
+      path: '/reports'
+      fullPath: '/reports'
+      preLoaderRoute: typeof ReportsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/library': {
+      id: '/library'
+      path: '/library'
+      fullPath: '/library'
+      preLoaderRoute: typeof LibraryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/client': {
+      id: '/client'
+      path: '/client'
+      fullPath: '/client'
+      preLoaderRoute: typeof ClientRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,17 +145,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ClientRoute: ClientRoute,
+  LibraryRoute: LibraryRoute,
+  LoginRoute: LoginRoute,
+  ReportsRoute: ReportsRoute,
+  TherapistRoute: TherapistRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
