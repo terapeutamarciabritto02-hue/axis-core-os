@@ -1,3 +1,5 @@
+AXIS™ CORE
+Sistema Operacional Vibracional Inteligente
 import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/axis/Nav";
 import { Hero } from "@/components/axis/Hero";
