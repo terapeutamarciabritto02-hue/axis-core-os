@@ -1,3 +1,14 @@
+# AXIS™ CORE
+
+Sistema Operacional Modular de Inteligência Vibracional Integrada.
+
+## Tecnologias
+## Estrutura
+## Módulos
+## Dashboard
+## Instalação
+## Deploy
+## Roadmap
 
 # AXIS™ CORE
 
