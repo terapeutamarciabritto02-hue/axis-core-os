@@ -1,3 +1,11 @@
+library/
+│
+├── protocols/
+├── frequencies/
+├── apostilas/
+├── quantum-box/
+├── mesa-hado/
+└── training/
 import { createFileRoute } from "@tanstack/react-router";
 import { PanelShell, Panel } from "@/components/axis/PanelShell";
 
