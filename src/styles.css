@@ -47,11 +47,11 @@
 
   /* AXIS CORE palette — deep void, electric blue, holographic cyan, energetic gold */
   --background: oklch(0.12 0.02 250);
+  /* AXIS CORE palette — #0a0a1a void, #141432 surface, #4f46e5 indigo, #00d4ff cyan */
+  --background: oklch(0.10 0.03 270);
   --foreground: oklch(0.97 0.01 220);
 
-  --card: oklch(0.16 0.03 250 / 0.6);
-  --card-foreground: oklch(0.97 0.01 220);
-  --popover: oklch(0.14 0.03 250);
+  --card: oklch(0.18 0.06 270 / 0.6);
   --popover-foreground: oklch(0.97 0.01 220);
 
   --primary: oklch(0.75 0.18 220);            /* electric blue */
